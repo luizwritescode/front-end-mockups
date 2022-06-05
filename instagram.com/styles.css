@@ -1,0 +1,343 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500,400&display=swap');
+
+html {
+    font-family: 'Roboto', sans-serif;
+}
+body {
+    margin: 0;
+    padding: 0;
+}
+.wrapper {
+    /* width: 100vw; */
+    background-color: #FAFAFA;
+    display: flex;
+    justify-content: center;
+}
+
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    position: sticky;
+    min-height: 54px;
+    padding: 5px 0;
+    border-bottom: 1px solid #DBDBDB;
+    /* margin-bottom: 50px; */
+}
+
+.nav-options {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-options ion-icon {
+    font-size: 20px;
+    margin-left: 25px;
+    cursor: pointer;
+}
+
+
+ion-icon:hover {
+    filter: opacity(0.5);
+    cursor: pointer;
+}
+
+.mobile-logo {
+    display: none;
+}
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo > div {
+    align-items: center;
+    border: 2px solid #333;
+    height: 18px;
+    width: 18px;
+    border-radius: 7px;
+    margin: 10px;
+}
+
+.logo > div > img {
+    position: relative;
+    left:4px;
+    width:12px;
+}
+
+.logo > img {
+    border-left: 1px solid #ddd;
+    padding: 0 10px;
+}
+
+.search-bar {
+    display: flex;
+    flex-direction: column;
+    width: 215px;
+    justify-content: center;
+}
+
+.search-bar > input {
+    background-color: #FAFAFA;
+    border: 1px solid #DBDBDB;
+    height: 26px;
+    border-radius: 3px;
+    display: flex;
+    text-align: center;
+    
+}
+
+.search-bar input:focus {
+    outline: 1px solid #DBDBDB;
+}
+
+
+
+.feed {
+    height: 100%;
+    max-width: 614px;
+    display: flex;
+    flex-direction: column;
+}
+
+.feed > div {
+    border: 1px solid #DBDBDB;
+    border-radius: 3px;
+}
+
+
+.stories {
+    height:118px;
+    margin-top: 34px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    overflow-x:hidden;
+    flex-wrap:nowrap;
+    padding-left:10px;
+}
+
+.stories > div {
+    position: relative;
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    min-width:80px;
+    text-align: center;
+    font-size: 12px;
+}
+
+.stories > div > span {
+    margin-top:6px;
+    text-align: center;
+    font-weight: 400;
+}
+
+
+.stories > div > img:first-child {
+    position: absolute;
+    z-index: 0;
+    top: -4px;
+    left: 7px;
+    width: 66px;
+    
+    
+}
+
+.stories > div > img:nth-child(2) {
+    width: 56px;
+    z-index: 1;
+}
+
+.stories button {
+    position: absolute;
+    z-index: 2;
+    background-color: #fff;
+    border-radius: 16px;
+    width: 26px;
+    height: 26px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: none;
+    border: none;
+    cursor:pointer;
+    box-shadow: 0px 0px 5px #333;
+    position: relative;
+    right: 145px;
+    color: #aaa;
+}
+
+.post {
+    margin: 30px 0px;
+    font-weight: 500;
+}
+
+.post-header {
+    background-color: #fff;
+    height: 61px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.post-header img {
+    width: 32px;
+    height: 32px;
+    margin: 17px 15px;
+}
+
+.post-header div {
+    display:flex;
+    flex-grow: 1;
+    justify-content: flex-end;
+    font-size: 20px;
+    margin-right: 17px;
+}
+
+.post-content {
+    width:100%;
+}
+
+.post-footer {
+    height: 76px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: #fff;
+}
+
+.post-footer div:first-child {
+    display:flex;
+    font-size: 20px;
+}
+.post-footer div:first-child div {
+    display:flex;
+    justify-content: flex-end;
+    flex-grow:1;
+    margin-right: 17px;
+}
+.post-footer ion-icon {
+    font-size: 20px;
+    margin-left: 17px;
+}
+
+.post-footer .liked-by {
+    font-size: 14px;
+    margin-left: 17px;
+    display: flex;
+    align-items: center;
+}
+
+.liked-by img {
+    width: 16px;
+    padding-right: 10px;
+}
+@media (max-width: 614px) {
+    body {
+    width: 99.9vw;    
+    }
+    nav {
+        max-width: 100%;
+        justify-content: space-around;
+    }
+
+    nav .logo {
+        justify-content: center;
+        flex-grow:1;
+    }
+
+    .nav-options {
+        justify-content: center;
+        margin-right: 10px;
+    
+    }
+    .nav-options > * {
+        display: none;
+    }
+
+    .nav-options > ion-icon:first-child {
+        display: block;
+        margin:0;
+    }
+
+    .mobile-logo {
+        display: block;
+        align-items: center;
+        border: 2px solid #333;
+        height: 18px;
+        width: 18px;
+        margin-left: 10px;
+        border-radius: 7px;
+        align-self:center;
+    }
+    
+    .mobile-logo > img {
+        position: relative;
+        left:4px;
+        width:12px;
+    }
+
+    .logo > img {
+        border: none;
+    }
+    .logo > div {
+        display: none;
+    }
+    .search-bar {
+        display: none;
+    }
+    .wrapper {
+        margin: 0;
+        max-width: 100%;
+    }
+    .feed {
+        max-width: 100%;
+    }
+
+    .feed > div {
+        border-radius: 0;
+    }
+    .post {
+        margin: 0; 
+        max-width: 100%;
+        position: relative;
+    }
+
+    .post > img {
+        max-width:100%;
+        height: auto;
+    }
+
+    .post-content {
+        max-width: 100%;
+    }
+    
+    .post-footer {
+        margin:0;
+       
+    }
+    .post-footer ion-icon {
+        margin-left: 10px;
+    }
+    .post-footer .liked-by {
+        margin-left: 10px;
+    }
+    .stories {
+        margin:0;
+        padding: 0;
+        max-width:100%;
+        border:none;
+        overflow: hidden;
+    }
+
+
+    .stories > div > img:nth-child(2) {
+        width: 56px;
+        z-index: 1;
+    }
+}
